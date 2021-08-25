@@ -17,7 +17,7 @@ result <- tryCatch({
     set.seed(as.integer(Sys.Date()))
 
     ## Directory with test files
-    tests_dir <- "/grade/tests/tests"
+    tests_dir <- "/grade/tests"
 
     ## Get question information on available points and displayed title
     question_details <- plr::get_question_details(tests_dir)

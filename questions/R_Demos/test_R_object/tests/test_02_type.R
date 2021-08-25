@@ -8,7 +8,7 @@ using(ttdo)                             # enable its 'diffobj' extension
 plr::source_and_eval_safe_with_hiding("/grade/student/student.R",
                                       NULL,
                                       "ag",
-                                      "../ans.R")
+                                      "/grade/tests/ans.R")
 
 ## check for class of 'x' by comparing to list or data.frame
 ## (if we test for 'data.frame' in predicate students sees that type in wrong answer
