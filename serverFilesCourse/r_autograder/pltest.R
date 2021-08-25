@@ -2,15 +2,6 @@
 ##
 ## Alton Barbehenn and Dirk Eddelbuettel, Aug/Sep 2019
 
-message_to_test_result <- function(msg, mxpts=100) {
-    data.frame(
-        name = "Error",
-        max_points = mxpts,
-        points = 0,
-        output = msg$message
-    )
-}
-
 result <- tryCatch({
 
     ## Set seed for control over randomness (change every day)
@@ -41,8 +32,8 @@ result <- tryCatch({
     ## output
     list(tests = res, score = score, succeeded = TRUE)
 },
-warning = function(w) list(tests = message_to_test_result(w), score = 0, succeeded = FALSE),
-error = function(e) list(tests = message_to_test_result(e), score = 0, succeeded = FALSE) )
+warning = function(w) list(tests = plr::message_to_test_result(w), score = 0, succeeded = FALSE),
+error = function(e) list(tests = plr::message_to_test_result(e), score = 0, succeeded = FALSE) )
 
 ## Record results as the required JSON object
 jsonlite::write_json(result, path = "results.json", auto_unbox = TRUE, force = TRUE)
