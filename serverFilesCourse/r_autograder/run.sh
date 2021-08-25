@@ -29,14 +29,14 @@ chmod -R go-rwx    ${TEST_DIR}
 ## under 'tinytest' artefacts are created where the tests are running
 ## so let the 'ag' user own the directory to write files, run mkdir, ...
 echo "[init] setting up tests directory for 'ag' user"
-chown ag:ag ${TEST_DIR}tests
+chown ag:ag ${TEST_DIR}
 #ls -ld ${TEST_DIR}tests
 
 echo "[init] copying content"
 cp    ${STUDENT_DIR}* ${BIN_DIR}
 cp    ${AG_DIR}*      ${MERGE_DIR}
 cp -r ${TEST_DIR}*    ${MERGE_DIR}
-chown ag:ag           ${MERGE_DIR}tests
+chown ag:ag           ${MERGE_DIR}
 
 #ls -ld ${MERGE_DIR} ${MERGE_DIR}* ${MERGE_DIR}tests/*
 
