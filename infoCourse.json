@@ -1,0 +1,36 @@
+{
+    "uuid": "65b094ae-0e75-475c-b189-4f44d0d14165",
+    "name": "DEMO 101",
+    "title": "R Autograder Example Questions",
+    "assessmentSets": [
+        {
+            "abbreviation": "G",
+            "name": "Gallery",
+            "heading": "Gallery of questions using different PrairieLearn elements",
+            "color": "orange1",
+            "description": "Gallery of PL questions"
+        }
+    ],
+    "options": {
+        "useNewQuestionRenderer": true
+    },
+    "topics": [
+        {
+            "name": "Demos",
+            "color": "blue1",
+            "description": "R Demo Questions"
+        },
+        {
+            "name": "Gallery",
+            "color": "orange1",
+            "description": "Gallery of PL questions"
+        }
+    ],
+    "tags": [
+        {
+            "name": "mariana@prairielearn.com",
+            "color": "gray1",
+            "description": "Author of the original question"
+        }
+    ]
+}

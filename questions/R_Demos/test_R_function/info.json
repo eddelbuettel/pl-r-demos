@@ -1,0 +1,16 @@
+{
+    "uuid": "2DF0E2E7-2C5D-4254-88A3-6E31B30F81AD",
+    "title": "02 - Test An R Function (or Two !!)",
+    "topic": "Demos",
+    "tags": ["v3", "demo", "r-autograder"],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "stat447/pl",
+        "serverFilesCourse": ["r_autograder/", "datasets/penguins.csv"],
+        "entrypoint": "/grade/serverFilesCourse/r_autograder/run.sh",
+        "timeout": 5
+    }
+}
