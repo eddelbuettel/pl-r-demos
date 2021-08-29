@@ -8,7 +8,7 @@ using(ttdo)                             # enable its 'diffobj' extension
 plr::source_and_eval_safe_with_hiding("/grade/student/student.R",
                                       NULL,
                                       "ag",
-                                      "../ans.R")
+                                      "/grade/tests/ans.R")
 ## to debug (see console)
 ##print(str(x))
 
@@ -16,7 +16,7 @@ plr::source_and_eval_safe_with_hiding("/grade/student/student.R",
 x <- as.data.frame(x)
 
 ## Reference answer, contains expected_x
-source("../ans.R")
+source("/grade/tests/ans.R")
 
 ## check
 expect_equal(x, expected_x)

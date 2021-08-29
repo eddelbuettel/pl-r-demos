@@ -1,4 +1,4 @@
-## @title Do we find object 'x'?
+## @title Does 'x' contain the names we expect?
 ## @score 1
 
 library(tinytest)                       # load testrunner
@@ -8,7 +8,14 @@ using(ttdo)                             # enable its 'diffobj' extension
 plr::source_and_eval_safe_with_hiding("/grade/student/student.R",
                                       NULL,
                                       "ag",
-                                      "../ans.R")
+                                      "/grade/tests/ans.R")
 
-## check for 'x'
-expect_true(exists("x"))
+## check for names of 'x'
+objnames <- names(x)
+
+## to debug (see console)
+##print(objnames)
+
+expect_true("ii" %in% objnames &&
+            "nn" %in% objnames &&
+            "cc" %in% objnames)
