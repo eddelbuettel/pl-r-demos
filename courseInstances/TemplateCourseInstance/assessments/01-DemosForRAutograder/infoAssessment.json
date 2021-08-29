@@ -1,0 +1,21 @@
+{
+    "uuid": "4b03bcb2-e695-40b9-a81a-af829b08e1f7",
+    "type": "Homework",
+    "title": "Question examples for R Autograder",
+    "set": "R Demo",
+    "number": "2",
+    "allowAccess": [
+
+    ],
+    "zones": [
+
+        {
+            "title": "Demo Questions (For All)",
+            "questions": [
+                {"id": "R_Demos/test_R_object", "points": 7, "maxPoints": 7},
+                {"id": "R_Demos/test_R_function", "points": 9, "maxPoints": 9}
+            ]
+        }
+
+    ]
+}

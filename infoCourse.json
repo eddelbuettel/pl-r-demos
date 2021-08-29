@@ -4,6 +4,13 @@
     "title": "R Autograder Example Questions",
     "assessmentSets": [
         {
+            "abbreviation": "D",
+            "name": "R Demo",
+            "heading": "Demo Questions for R Autograder",
+            "color": "blue1",
+            "description": "R Demo Questions"
+        },
+        {
             "abbreviation": "G",
             "name": "Gallery",
             "heading": "Gallery of questions using different PrairieLearn elements",
