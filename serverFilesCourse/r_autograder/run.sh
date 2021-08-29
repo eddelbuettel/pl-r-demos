@@ -5,7 +5,8 @@
 ##########################
 
 ## switch to control if more values are displayed on console or not
-DEBUG="off"
+DEBUG="on"
+export DEBUG
 if [ ${DEBUG} == "on" ]; then VFLAG="-v" else VFLAG=""; fi
 
 ## the directory where the file pertaining to the job are mounted
@@ -42,7 +43,7 @@ cp    ${VFLAG}  ${AG_DIR}/*       ${MERGE_DIR}
 cp -r ${VFLAG}  ${TEST_DIR}/*     ${MERGE_DIR}
 chown ${VFLAG}  ag:ag             ${MERGE_DIR}
 
-if [ ${DEBUG} == "on" ]; then ls -ld ${MERGE_DIR} ${MERGE_DIR}/* ${MERGE_DIR}/tests; fi
+if [ ${DEBUG} == "on" ]; then ls -ld ${MERGE_DIR} ${MERGE_DIR}/*; fi
 
 
 ##########################
