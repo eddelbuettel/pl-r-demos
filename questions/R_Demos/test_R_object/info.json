@@ -2,7 +2,7 @@
     "uuid": "710ea8ee-1410-494a-9db0-ab521eeda429",
     "title": "01 - Test An R Object",
     "topic": "Demos",
-    "tags": ["v3", "demo", "r-autograder"],
+    "tags": ["v3", "demo", "r-autograder", "rstudio"],
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",
@@ -12,5 +12,11 @@
         "serverFilesCourse": ["r_autograder/"],
         "entrypoint": "/grade/serverFilesCourse/r_autograder/run.sh",
         "timeout": 20
+    },
+    "workspaceOptions": {
+        "image": "prairielearn/workspace-rstudio",
+        "port": 3939,
+        "home": "/home/rstudio/workspace",
+        "rewriteUrl": false
     }
 }
