@@ -1,6 +1,6 @@
 ## Simple-yet-good enough runner for R questions
 ##
-## Alton Barbehenn and Dirk Eddelbuettel, Aug/Sep 2019
+## Alton Barbehenn and Dirk Eddelbuettel, 2019 - 2021
 
 result <- tryCatch({
 
@@ -15,7 +15,8 @@ result <- tryCatch({
 
     ## Run tests in the test directory
     cat("[pltest] about to call tests from", getwd(), "\n")
-    test_results <- as.data.frame(tinytest::run_test_dir(tests_dir, verbose = FALSE))
+    test_results <- as.data.frame(tinytest::run_test_dir(tests_dir,
+                                                         verbose = Sys.getenv("DEBUG", "off") == "on"))
 
     ## Aggregate test results and process NAs as some question may have exited
     res <- merge(test_results, question_details, by = "file", all = TRUE)
