@@ -12,5 +12,11 @@
         "serverFilesCourse": ["r_autograder/", "datasets/penguins.csv"],
         "entrypoint": "/grade/serverFilesCourse/r_autograder/run.sh",
         "timeout": 5
-    }
+    },
+    "workspaceOptions": {
+        "image": "prairielearn/workspace-rstudio",
+        "port": 3939,
+        "home": "/home/rstudio/workspace",
+        "rewriteUrl": false
+   }
 }
