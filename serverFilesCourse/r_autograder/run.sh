@@ -5,7 +5,7 @@
 ##########################
 
 ## switch to control if more values are displayed on console or not
-DEBUG="on"
+DEBUG="off"
 export DEBUG
 if [ ${DEBUG} == "on" ]; then VFLAG="-v" else VFLAG=""; fi
 
