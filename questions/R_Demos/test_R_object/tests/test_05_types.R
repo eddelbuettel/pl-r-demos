@@ -1,4 +1,4 @@
-## @title Does 'x' contain the names we expect?
+## @title Does 'x' contain the types we expect?
 ## @score 1
 
 library(tinytest)                       # load testrunner
