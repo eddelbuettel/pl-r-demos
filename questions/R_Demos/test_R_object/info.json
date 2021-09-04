@@ -8,7 +8,7 @@
     "gradingMethod": "External",
     "externalGradingOptions": {
         "enabled": true,
-        "image": "stat447/pl",
+        "image": "prairielearn/grader-r",
         "serverFilesCourse": ["r_autograder/"],
         "entrypoint": "/grade/serverFilesCourse/r_autograder/run.sh",
         "timeout": 20
