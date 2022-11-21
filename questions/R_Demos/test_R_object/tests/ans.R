@@ -1,4 +1,5 @@
+params = jsonlite::read_json("/grade/data/data.json")$params
 
-expected_x <- data.frame(ii = 42L,
-                         nn = 3.1415,
+expected_x <- data.frame(ii = as.integer(params$ii),
+                         nn = params$nn,
                          cc = "hello, world!")
