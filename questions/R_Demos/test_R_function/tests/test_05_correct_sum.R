@@ -10,14 +10,15 @@ using(ttdo)
 penguinsTest <- read.csv("/grade/serverFilesCourse/datasets/penguins.csv")
 penguinsTest$body_mass_g  <- penguinsTest$body_mass_g + rnorm(nrow(penguinsTest), mean = 5, sd = 1)
 
+## Get student's result
+student <- plr::source_and_eval_safe_with_hiding("/grade/student/student2.R",
+                                                 penguin_sum(penguinsTest),
+                                                 "ag",
+                                                 "/grade/tests/solution.R")
+
 ## Get correct result
 source("/grade/tests/ans.R")
 reference <- penguin_sum_reference(penguinsTest)
-
-## Get student's result
-student <- plr::source_and_eval_safe("/grade/student/student2.R",
-                                     penguin_sum(penguinsTest),
-                                     "ag")
 
 ## Test
 expect_equivalent_with_diff(student, reference, tolerance = 1e-4)
